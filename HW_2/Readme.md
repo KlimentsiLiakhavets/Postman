@@ -1,4 +1,4 @@
-                                                HW_2 Postman
+						HW_2 Postman
 ```
 
 				http://162.55.220.72:5005/first
@@ -37,19 +37,19 @@
 
 4. Проверить, что name в ответе равно name s request (name вбить руками.)
 	
-	pm.test("name", function () {
+	pm.test("name в ответе равен name s request", function () {
     	pm.expect(resBody.name).to.eql("Klim");
 	});
 
 5. Проверить, что age в ответе равно age s request (age вбить руками.)
 	
-	pm.test("age", function () {
+	pm.test("age в ответе равен age s request", function () {
 	pm.expect(resBody.age).to.eql("39");
 	});
 
 6. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
 	
-	pm.test("salary",function () {
+	pm.test("salary в ответе равен salary s request",function () {
     	pm.expect(resBody.salary).to.eql(500);
 	});
 
@@ -81,7 +81,7 @@
 
 12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
 	
-	pm.test("u_salary_1_5_year", function () {
+	pm.test("u_salary_1_5_year равен salary*4", function () {
     	pm.expect(resBody.family.u_salary_1_5_year).to.eql(req.salary*4);
 	});
 
@@ -109,19 +109,19 @@
 
 5. Проверить, что name в ответе равно name s request (name забрать из request.)
 	
-	pm.test("name_is", function () {
+	pm.test("name равен name c request", function () {
     	pm.expect(resBody.name).to.eql(req.name);
 	});
 
 6. Проверить, что age в ответе равно age s request (age забрать из request.)
 	
-	pm.test("age_is", function () {
+	pm.test("age в ответе равно age c request", function () {
     	pm.expect(resBody.age).to.eql(req.age);
 	});
 
 7. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
 	
-	pm.test("salary_is", function () {
+	pm.test("salary в ответе равно salary c request", function () {
     	pm.expect(resBody.salary).to.eql(+req.salary);
 	});
 
@@ -149,7 +149,7 @@
 
 12. Проверить, что параметр age имеет значение 4.
 	
-	pm.test("У dog age 4", () => {
+	pm.test("dog_age_4", () => {
     	pm.expect(resBody.family.pets.dog.age).to.be.oneOf([4]);
 	});
 
@@ -176,13 +176,13 @@
 
 5. Проверить, что name в ответе равно name s request (name забрать из request.)
 	
-	pm.test("name_is", function () {
+	pm.test("name в ответе равно name s request", function () {
     	pm.expect(resBody.name).to.eql(req.name);
 	});
 
 6. Проверить, что age в ответе равно age из request (age забрать из request.)
 	
-	pm.test("age_is", function () {
+	pm.test("age в ответе равно age из request", function () {
     	pm.expect(resBody.age).to.eql(+req.age);
 	});
 
@@ -208,17 +208,17 @@
 
 12. Проверить, что 0-й элемент параметра salary равен salary из request (salary забрать из request.)
 	
-	pm.test("Salary[0]", function () {
+	pm.test("0-й элемент параметра salary равен salary из request", function () {
     	pm.expect(resBody.salary[0]).to.eql(+req.salary);});
 
 13. Проверить, что 1-й элемент параметра salary равен salary*2 из request (salary забрать из request.)
 	
-	pm.test("Salary[1]", function () {
+	pm.test("1-й элемент параметра salary равен salary*2 из request", function () {
     	pm.expect(+resBody.salary[1]).to.eql(req.salary*2);});
 
 14. Проверить, что 2-й элемент параметра salary равен salary*3 из request (salary забрать из request.)
 	
-	pm.test("Salary[2]", function () {
+	pm.test("2-й элемент параметра salary равен salary*3 из request", function () {
     	pm.expect(+resBody.salary[2]).to.eql(req.salary*3);});
 
 15. Создать в окружении переменную name
@@ -239,7 +239,7 @@
 21. Написать цикл который выведет в консоль по порядку элементы списка из параметра salary.
 	
 	for (a = 0; a < resBody.salary.length; a++){
-  	console.log("cycle", resBody.salary[a]);
+  	console.log("the_cycle_of_the_salary_parameter", resBody.salary[a]);
   	};
 
 
@@ -346,6 +346,6 @@
 
 22. ***Написать цикл который выведет в консоль по порядку элементы списка из параметра person.
 
-	for (let a in resBody.person){
-	 console.log( a, ":", resBody.person[a]);
+	for (let a in resBody.person.u_name){
+	 console.log( a, ":", resBody.person.u_name[a]);
      };
