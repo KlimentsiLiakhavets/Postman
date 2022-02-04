@@ -486,4 +486,3 @@ response
 	pm.test("Проверка структуры json в ответе", () => { 
 	pm.response.to.have.jsonSchema(schemajson);
 	});
-
